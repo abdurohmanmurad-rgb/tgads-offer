@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Telegram Secrets 1.0 — Taklif</title>
+<meta name="description" content="Telegram Ads orqali birinchi mijozgacha bo'lgan yo'lni 15 kunda bosib o'tish tizimi.">
+<meta property="og:title" content="Telegram Secrets 1.0 — Taklif">
+<meta property="og:description" content="Telegram Ads orqali birinchi mijozgacha bo'lgan yo'lni 15 kunda bosib o'tish tizimi.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:type" content="website">
+
+<style>
+:root{
+  --fon:#050807;
+  --fon-2:#0B100D;
+  --fon-3:#121A16;
+  --chiziq:#1C2922;
+  --matn:#F3F8F5;
+  --matn-2:#9CB0A6;
+  --matn-3:#6A7E74;
+  --yashil:#16C060;
+  --yashil-yorqin:#2BE07A;
+  --yashil-qora:#08281A;
+  --sariq:#F5C518;
+  --qizil:#E03A3A;
+  --r:16px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--fon);color:var(--matn);
+  font:400 16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+button,input{font:inherit;color:inherit}
+a{color:inherit}
+
+.ich{max-width:1080px;margin:0 auto;padding:0 18px}
+.tor{max-width:760px;margin:0 auto}
+
+/* ---------- Shoshilish chizig'i ---------- */
+.chiziq{
+  background:linear-gradient(90deg,#8E1111,var(--qizil) 45%,#8E1111);
+  text-align:center;padding:9px 14px;
+  font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+}
+
+/* ---------- Sticky header ---------- */
+.bosh{
+  position:sticky;top:0;z-index:50;
+  background:rgba(5,8,7,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--chiziq);
+}
+.boshIch{
+  display:flex;align-items:center;gap:14px;
+  padding:11px 18px;max-width:1080px;margin:0 auto;
+}
+.brend{display:flex;align-items:center;gap:9px;flex:0 0 auto;font-weight:800;letter-spacing:-.02em}
+.brend .nuqta{width:9px;height:9px;border-radius:50%;background:var(--yashil-yorqin)}
+.brend span{font-size:15px;white-space:nowrap}
+.brend i{font-style:normal;color:var(--yashil-yorqin)}
+
+.taymer{flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:8px;min-width:0}
+.taymer .yorliq{font-size:11px;font-weight:700;letter-spacing:.09em;color:var(--matn-3);text-transform:uppercase}
+.taymer .qiymat{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.taymer .qiymat b{color:var(--sariq)}
+.taymer .qiymat s{text-decoration:none;font-weight:600;color:var(--matn-3);font-size:12px}
+
+.tugmaSariq{
+  flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+  padding:11px 18px;border:0;border-radius:10px;cursor:pointer;text-decoration:none;
+  background:var(--sariq);color:#140F00;
+  font-size:13.5px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;
+  transition:transform .1s,box-shadow .18s,background .18s;
+}
+.tugmaSariq:hover{background:#FFD633;box-shadow:0 6px 22px rgba(245,197,24,.28)}
+.tugmaSariq:active{transform:scale(.98)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:56px 0 40px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:-20% -30% auto;height:720px;z-index:-1;
+  background:
+    radial-gradient(45% 55% at 22% 12%, rgba(22,192,96,.20), transparent 70%),
+    radial-gradient(45% 55% at 80% 4%, rgba(22,192,96,.12), transparent 70%);
+  filter:blur(10px);
+}
+.ustki{
+  display:inline-flex;align-items:center;gap:8px;margin:0 auto 20px;
+  padding:7px 14px;border-radius:999px;
+  background:var(--yashil-qora);border:1px solid rgba(43,224,122,.28);
+  font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--yashil-yorqin);
+}
+.hero .tor{text-align:center}
+h1{
+  margin:0;font-size:clamp(30px,6.2vw,56px);line-height:1.1;
+  font-weight:800;letter-spacing:-.03em;text-wrap:balance;
+}
+h1 em{font-style:normal;color:var(--yashil-yorqin)}
+.qavs{
+  margin:16px 0 0;font-size:clamp(17px,3.4vw,23px);font-weight:700;
+  color:var(--sariq);text-wrap:balance;
+}
+.kafolatQator{
+  margin:16px auto 0;max-width:620px;
+  font-size:14.5px;color:var(--matn-2);text-wrap:balance;
+}
+
+.video{
+  position:relative;margin:30px auto 0;max-width:760px;
+  border-radius:18px;overflow:hidden;
+  border:1px solid var(--chiziq);
+  box-shadow:0 24px 60px rgba(0,0,0,.6);
+}
+.video img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.video .play{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.45));
+  cursor:pointer;border:0;width:100%;
+}
+.video .play span{
+  width:74px;height:74px;border-radius:50%;
+  background:rgba(255,255,255,.94);color:#06130C;
+  display:grid;place-items:center;
+  box-shadow:0 10px 34px rgba(0,0,0,.5);
+  transition:transform .15s;
+}
+.video .play:hover span{transform:scale(1.07)}
+.video .play svg{width:28px;height:28px;margin-left:4px}
+
+.ctaKatta{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  margin:26px auto 0;padding:18px 34px;border-radius:14px;text-decoration:none;
+  background:var(--yashil);color:#04160C;
+  font-size:clamp(16px,3.6vw,19px);font-weight:800;letter-spacing:-.01em;
+  box-shadow:0 10px 34px rgba(22,192,96,.26);
+  transition:background .18s,transform .1s,box-shadow .18s;
+}
+.ctaKatta:hover{background:var(--yashil-yorqin);box-shadow:0 14px 40px rgba(22,192,96,.36)}
+.ctaKatta:active{transform:scale(.99)}
+.ctaOst{margin:12px 0 0;font-size:13px;color:var(--matn-3)}
+
+/* ---------- Bo'limlar ---------- */
+section{padding:66px 0}
+.bolimBosh{text-align:center;margin:0 auto 38px;max-width:780px}
+.bolimBosh h2{
+  margin:0;font-size:clamp(24px,4.6vw,38px);line-height:1.18;
+  font-weight:800;letter-spacing:-.025em;text-wrap:balance;
+}
+.bolimBosh h2 em{font-style:normal;color:var(--yashil-yorqin)}
+.bolimBosh p{margin:12px 0 0;color:var(--matn-2);font-size:15.5px;text-wrap:balance}
+
+.kartalar{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.karta{
+  padding:24px 22px;border-radius:var(--r);
+  background:var(--fon-2);border:1px solid var(--chiziq);
+}
+.karta .raqamcha{
+  width:34px;height:34px;border-radius:9px;margin-bottom:14px;
+  display:grid;place-items:center;
+  background:var(--yashil-qora);color:var(--yashil-yorqin);
+  font-size:14px;font-weight:800;
+}
+.karta h3{margin:0 0 8px;font-size:17px;font-weight:750;letter-spacing:-.01em}
+.karta p{margin:0;color:var(--matn-2);font-size:14.5px}
+
+/* ---------- Nima kiradi ---------- */
+.royxat{display:flex;flex-direction:column;gap:12px}
+.qator{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:18px 20px;border-radius:14px;
+  background:var(--fon-2);border:1px solid var(--chiziq);
+}
+.qator .belgi{
+  flex:0 0 auto;width:24px;height:24px;border-radius:50%;margin-top:2px;
+  background:var(--yashil);color:#04160C;display:grid;place-items:center;
+}
+.qator .belgi svg{width:14px;height:14px}
+.qator h4{margin:0 0 4px;font-size:16px;font-weight:700}
+.qator p{margin:0;color:var(--matn-2);font-size:14.5px}
+.qator .baho{
+  margin-left:auto;flex:0 0 auto;align-self:center;
+  font-size:13.5px;font-weight:700;color:var(--matn-3);white-space:nowrap;
+}
+
+/* ---------- Narx bloki ---------- */
+.narx{
+  max-width:620px;margin:0 auto;padding:34px 26px;text-align:center;
+  border-radius:22px;position:relative;
+  background:linear-gradient(180deg,#0C1F15,var(--fon-2));
+  border:1px solid rgba(43,224,122,.3);
+  box-shadow:0 0 0 1px rgba(43,224,122,.08), 0 30px 70px rgba(0,0,0,.55);
+}
+.narx .jami{font-size:14px;color:var(--matn-3)}
+.narx .eski{font-size:19px;color:var(--matn-3);text-decoration:line-through;margin-top:4px}
+.narx .asosiy{
+  margin:6px 0 0;font-size:clamp(36px,8vw,60px);font-weight:800;letter-spacing:-.03em;
+  color:var(--yashil-yorqin);line-height:1.05;
+}
+.narx .izoh{margin:8px 0 0;color:var(--matn-2);font-size:14.5px}
+.narx .ctaKatta{width:100%;margin-top:22px}
+.narxTaymer{
+  margin:18px auto 0;display:flex;gap:8px;justify-content:center;
+}
+.narxTaymer div{
+  min-width:62px;padding:10px 6px;border-radius:11px;
+  background:var(--fon-3);border:1px solid var(--chiziq);
+}
+.narxTaymer b{display:block;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+.narxTaymer s{display:block;text-decoration:none;font-size:11px;color:var(--matn-3);
+  letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+
+/* ---------- Kafolat ---------- */
+.kafolat{
+  max-width:760px;margin:0 auto;padding:30px 26px;
+  display:flex;gap:20px;align-items:flex-start;
+  border-radius:20px;background:var(--fon-2);
+  border:1px dashed rgba(43,224,122,.34);
+}
+.kafolat .muhr{
+  flex:0 0 auto;width:66px;height:66px;border-radius:50%;
+  background:var(--yashil-qora);color:var(--yashil-yorqin);
+  display:grid;place-items:center;border:1px solid rgba(43,224,122,.34);
+}
+.kafolat .muhr svg{width:30px;height:30px}
+.kafolat h3{margin:0 0 8px;font-size:19px;font-weight:750}
+.kafolat p{margin:0;color:var(--matn-2);font-size:15px}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq details{
+  border-radius:14px;background:var(--fon-2);border:1px solid var(--chiziq);
+  overflow:hidden;
+}
+.faq summary{
+  list-style:none;cursor:pointer;padding:18px 20px;
+  font-size:16px;font-weight:700;display:flex;align-items:center;gap:14px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";margin-left:auto;font-size:22px;font-weight:400;color:var(--yashil-yorqin);
+  transition:transform .2s;line-height:1;
+}
+.faq details[open] summary::after{content:"−"}
+.faq .javob{padding:0 20px 18px;color:var(--matn-2);font-size:15px}
+
+/* ---------- Mobil sticky CTA ---------- */
+.pastCta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(5,8,7,.94);backdrop-filter:blur(10px);
+  border-top:1px solid var(--chiziq);
+  transform:translateY(120%);transition:transform .25s;
+}
+.pastCta.korin{transform:translateY(0)}
+.pastCta .ctaKatta{width:100%;margin:0;padding:15px;font-size:16px}
+@media (min-width:820px){ .pastCta{display:none} }
+
+.pastyozuv{
+  padding:34px 0 40px;text-align:center;color:var(--matn-3);font-size:13px;
+  border-top:1px solid var(--chiziq);line-height:1.7;
+}
+
+/* ---------- Reveal ---------- */
+.kir{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.kir.bor{opacity:1;transform:none}
+
+@media (max-width:620px){
+  .taymer .yorliq{display:none}
+  .brend{display:none}                 /* joy yetmaydi — taymer va CTA muhimroq */
+  .taymer{justify-content:flex-start}
+  .taymer .qiymat{font-size:14px}
+  .tugmaSariq{padding:10px 14px;font-size:12.5px}
+  .boshIch{padding:10px 14px;gap:10px}
+  .chiziq{font-size:11.5px;letter-spacing:.04em}
+  .kafolat{flex-direction:column;align-items:center;text-align:center}
+  .qator .baho{margin-left:0;align-self:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .kir{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="chiziq" id="shoshilish">⚠️ Joylar tugayapti — qabul tez orada yopiladi</div>
+
+<header class="bosh">
+  <div class="boshIch">
+    <div class="brend">
+      <span class="nuqta"></span>
+      <span>TELEGRAM <i>SECRETS</i></span>
+    </div>
+    <div class="taymer">
+      <span class="yorliq">Yopilishiga</span>
+      <span class="qiymat" id="boshTaymer">— <s>kun</s> — <s>soat</s> — <s>daq</s></span>
+    </div>
+    <a class="tugmaSariq" href="#narx" data-cta="header">JOYNI BAND QILISH</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="ich tor">
+      <div class="ustki">Targetologlar uchun</div>
+
+      <h1>Telegram Ads'da birinchi <em>$1000</em>ni<br>15 kunda topish tizimi</h1>
+
+      <p class="qavs">(katta byudjetsiz va mijozlar bazasisiz)</p>
+
+      <p class="kafolatQator">
+        Bu kurs emas — bu qadamma-qadam tizim. Birinchi mijozingizni topguningizcha
+        siz bilan ishlaymiz.
+      </p>
+
+      <div class="video">
+        <img src="hero-1080.webp"
+             srcset="hero-760.webp 760w, hero-1080.webp 1080w, hero-1280.webp 1280w"
+             sizes="(max-width:800px) 100vw, 760px"
+             width="1280" height="720" alt="Telegram Secrets 1.0" fetchpriority="high">
+        <button class="play" id="videoTugma" aria-label="Videoni ko'rish">
+          <span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <a class="ctaKatta" href="#narx" data-cta="hero">Joyimni band qilish</a>
+      <p class="ctaOst">Qabul <b id="sanaOst">—</b> gacha ochiq</p>
+    </div>
+  </section>
+
+  <!-- ================= MUAMMO ================= -->
+  <section style="background:var(--fon-2);border-block:1px solid var(--chiziq)">
+    <div class="ich">
+      <div class="bolimBosh">
+        <h2>Telegram Ads'da ko'pchilik <em>shu 3 joyda</em> to'xtaydi</h2>
+        <p>Byudjet yo'qligi emas — quyidagilar pulni yeb qo'yadi.</p>
+      </div>
+      <div class="kartalar">
+        <div class="karta kir">
+          <div class="raqamcha">1</div>
+          <h3>Noto'g'ri kanal tanlash</h3>
+          <p>Obunachi soni katta, lekin auditoriya sizniki emas. Byudjet ketadi, lid kelmaydi.</p>
+        </div>
+        <div class="karta kir">
+          <div class="raqamcha">2</div>
+          <h3>Kreativ va taklif zaif</h3>
+          <p>Reklama ko'rinadi-yu, bosilmaydi. CTR past bo'lsa CPM ham qimmatlashadi.</p>
+        </div>
+        <div class="karta kir">
+          <div class="raqamcha">3</div>
+          <h3>Voronka yo'q</h3>
+          <p>Odam kanalga kiradi va yo'qoladi. Lid qayerda to'xtaganini hech kim bilmaydi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NATIJALAR (foydalanuvchi to'ldiradi) ================= -->
+  <section>
+    <div class="ich">
+      <div class="bolimBosh">
+        <h2>Tizim bo'yicha ishlaganlarning <em>natijalari</em></h2>
+        <p>Bu joyga real skrinshotlar qo'yiladi — o'ylab topilgan raqam emas.</p>
+      </div>
+      <div class="kartalar">
+        <div class="karta kir">
+          <div class="raqamcha">★</div>
+          <h3>[O'QUVCHI ISMI]</h3>
+          <p>[Qisqa natija: nechanchi kuni birinchi mijoz, qancha byudjet, qancha daromad]</p>
+        </div>
+        <div class="karta kir">
+          <div class="raqamcha">★</div>
+          <h3>[O'QUVCHI ISMI]</h3>
+          <p>[Qisqa natija]</p>
+        </div>
+        <div class="karta kir">
+          <div class="raqamcha">★</div>
+          <h3>[O'QUVCHI ISMI]</h3>
+          <p>[Qisqa natija]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NIMA KIRADI ================= -->
+  <section style="background:var(--fon-2);border-block:1px solid var(--chiziq)">
+    <div class="ich tor">
+      <div class="bolimBosh">
+        <h2>Ichida <em>nima bor</em></h2>
+        <p>Har bir blok bitta aniq natijaga olib boradi.</p>
+      </div>
+      <div class="royxat">
+
+        <div class="qator kir">
+          <span class="belgi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span>
+          <div>
+            <h4>[1-MODUL NOMI]</h4>
+            <p>[Nima o'rganadi va qanday natijaga olib keladi]</p>
+          </div>
+          <span class="baho">[qiymati]</span>
+        </div>
+
+        <div class="qator kir">
+          <span class="belgi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span>
+          <div>
+            <h4>[2-MODUL NOMI]</h4>
+            <p>[Nima o'rganadi]</p>
+          </div>
+          <span class="baho">[qiymati]</span>
+        </div>
+
+        <div class="qator kir">
+          <span class="belgi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span>
+          <div>
+            <h4>[3-MODUL NOMI]</h4>
+            <p>[Nima o'rganadi]</p>
+          </div>
+          <span class="baho">[qiymati]</span>
+        </div>
+
+        <div class="qator kir">
+          <span class="belgi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span>
+          <div>
+            <h4>BONUS — [BONUS NOMI]</h4>
+            <p>[Tayyor shablon, skript yoki jamoa chati]</p>
+          </div>
+          <span class="baho">[qiymati]</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NARX ================= -->
+  <section id="narx">
+    <div class="ich">
+      <div class="bolimBosh">
+        <h2>Bugungi <em>narx</em></h2>
+        <p>Qabul yopilgach narx asl qiymatiga qaytadi.</p>
+      </div>
+
+      <div class="narx">
+        <div class="jami">Umumiy qiymati</div>
+        <div class="eski">[ESKI NARX]</div>
+        <p class="asosiy">[NARX]</p>
+        <p class="izoh">Bir martalik to'lov. Bo'lib to'lash kerak bo'lsa — adminga yozing.</p>
+
+        <div class="narxTaymer" id="narxTaymer">
+          <div><b id="nKun">—</b><s>kun</s></div>
+          <div><b id="nSoat">—</b><s>soat</s></div>
+          <div><b id="nDaq">—</b><s>daqiqa</s></div>
+          <div><b id="nSon">—</b><s>soniya</s></div>
+        </div>
+
+        <a class="ctaKatta" id="asosiyCta" href="#" data-cta="narx">Joyimni band qilish</a>
+        <p class="ctaOst">To'lovdan keyin chekni yuborasiz — joyingiz shu zahoti tasdiqlanadi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KAFOLAT ================= -->
+  <section style="background:var(--fon-2);border-block:1px solid var(--chiziq)">
+    <div class="ich">
+      <div class="kafolat kir">
+        <span class="muhr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.6l7.5 3v6c0 5-3.2 8.6-7.5 9.8C7.7 20.2 4.5 16.6 4.5 11.6v-6z"/>
+            <path d="M8.8 12.2l2.3 2.3 4.3-4.6"/>
+          </svg>
+        </span>
+        <div>
+          <h3>[KAFOLAT NOMI]</h3>
+          <p>[Kafolat sharti: nima bo'lsa nima qilasiz. Masalan — belgilangan muddatda
+             tizimni bosqichma-bosqich bajarib natija bo'lmasa, nima taklif qilasiz.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section>
+    <div class="ich">
+      <div class="bolimBosh">
+        <h2>Ko'p beriladigan <em>savollar</em></h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Tajribam yo'q, boshlay olamanmi?</summary>
+          <div class="javob">[Javob]</div>
+        </details>
+        <details>
+          <summary>Qancha byudjet kerak bo'ladi?</summary>
+          <div class="javob">[Javob]</div>
+        </details>
+        <details>
+          <summary>Qancha vaqt ajratishim kerak?</summary>
+          <div class="javob">[Javob]</div>
+        </details>
+        <details>
+          <summary>To'lovni qanday amalga oshiraman?</summary>
+          <div class="javob">Tugmani bosasiz, ochilgan sahifada karta raqamlari bo'ladi.
+            To'lov qilib chek skrinshotini o'sha yerga yuklaysiz.</div>
+        </details>
+        <details>
+          <summary>Savolim bor, kim bilan gaplashaman?</summary>
+          <div class="javob">Telegram orqali adminga yozing —
+            <a id="adminHavola" href="#" style="color:var(--yashil-yorqin)">shu yerda</a>.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YAKUNIY CTA ================= -->
+  <section style="background:linear-gradient(180deg,var(--fon),var(--yashil-qora))">
+    <div class="ich tor" style="text-align:center">
+      <div class="bolimBosh" style="margin-bottom:22px">
+        <h2>Qaror <em>bugun</em> qabul qilinadi</h2>
+        <p>Taymer tugagach bu sahifa yopiladi va keyingi oqim kutiladi.</p>
+      </div>
+      <a class="ctaKatta" href="#narx" data-cta="yakun">Joyimni band qilish</a>
+      <p class="ctaOst">Savol bo'lsa — <a id="adminHavola2" href="#" style="color:var(--yashil-yorqin)">adminga yozing</a></p>
+    </div>
+  </section>
+
+</main>
+
+<div class="pastyozuv">
+  Telegram Secrets 1.0 · Jamoliddin Zaynulobiddinov<br>
+  Natija sizning bajarganingizga bog'liq. Daromad kafolati berilmaydi.
+</div>
+
+<div class="pastCta" id="pastCta">
+  <a class="ctaKatta" href="#narx" data-cta="pastki">Joyimni band qilish</a>
+</div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var CFG = window.CFG || {};
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* ---------- CTA havolalari ---------- */
+  var ctaUrl = CFG.CTA_URL || "#";
+  var adminUrl = CFG.ADMIN_URL || "#";
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-cta]'), function (a) {
+    if (a.id === "asosiyCta") { a.href = ctaUrl; a.target = "_blank"; a.rel = "noopener"; }
+    a.addEventListener("click", function () { olcha("cta_bosildi", { joy: a.getAttribute("data-cta") }); });
+  });
+  ["adminHavola", "adminHavola2"].forEach(function (id) {
+    var el = $(id);
+    if (el) { el.href = adminUrl; el.target = "_blank"; el.rel = "noopener"; }
+  });
+
+  /* ---------- Taymer ---------- */
+  var tugash = new Date(CFG.TUGASH_VAQTI || "2026-12-31T23:59:00+05:00").getTime();
+
+  function ikki(n) { return (n < 10 ? "0" : "") + n; }
+
+  function yangila() {
+    var farq = tugash - Date.now();
+
+    if (isNaN(tugash)) { return false; }
+
+    if (farq <= 0) {
+      $("boshTaymer").textContent = "Qabul yopildi";
+      $("shoshilish").textContent = "Qabul yopildi — keyingi oqimni kuting";
+      ["nKun", "nSoat", "nDaq", "nSon"].forEach(function (id) { $(id).textContent = "00"; });
+      return false;
+    }
+
+    var son = Math.floor(farq / 1000);
+    var kun = Math.floor(son / 86400);
+    var soat = Math.floor((son % 86400) / 3600);
+    var daq = Math.floor((son % 3600) / 60);
+    var sek = son % 60;
+
+    $("boshTaymer").innerHTML =
+      "<b>" + ikki(kun) + "</b> <s>kun</s> " +
+      "<b>" + ikki(soat) + "</b> <s>soat</s> " +
+      "<b>" + ikki(daq) + "</b> <s>daq</s> " +
+      "<b>" + ikki(sek) + "</b> <s>son</s>";
+
+    $("nKun").textContent = ikki(kun);
+    $("nSoat").textContent = ikki(soat);
+    $("nDaq").textContent = ikki(daq);
+    $("nSon").textContent = ikki(sek);
+    return true;
+  }
+
+  if (yangila()) { setInterval(yangila, 1000); }
+
+  /* Qabul sanasini matn bilan ko'rsatish */
+  try {
+    var d = new Date(CFG.TUGASH_VAQTI);
+    if (!isNaN(d)) {
+      var oylar = ["yanvar","fevral","mart","aprel","may","iyun",
+                   "iyul","avgust","sentabr","oktabr","noyabr","dekabr"];
+      $("sanaOst").textContent = d.getDate() + "-" + oylar[d.getMonth()];
+    }
+  } catch (e) {}
+
+  /* ---------- Mobil pastki CTA ---------- */
+  var past = $("pastCta");
+  var hero = document.querySelector(".hero");
+  window.addEventListener("scroll", function () {
+    var chegara = hero ? hero.offsetHeight * 0.7 : 500;
+    past.classList.toggle("korin", window.pageYOffset > chegara);
+  }, { passive: true });
+
+  /* ---------- Scroll reveal ---------- */
+  var kuzatuvchi = ("IntersectionObserver" in window)
+    ? new IntersectionObserver(function (yozuvlar) {
+        yozuvlar.forEach(function (y) {
+          if (y.isIntersecting) { y.target.classList.add("bor"); kuzatuvchi.unobserve(y.target); }
+        });
+      }, { rootMargin: "0px 0px -12% 0px" })
+    : null;
+
+  var kirlar = document.querySelectorAll(".kir");
+  Array.prototype.forEach.call(kirlar, function (el, i) {
+    el.style.transitionDelay = (Math.min(i % 4, 3) * 70) + "ms";
+    if (kuzatuvchi) kuzatuvchi.observe(el); else el.classList.add("bor");
+  });
+
+  /* Xavfsizlik: biror sabab bilan reveal ishlamasa, kontent ko'rinmay qolmasin */
+  setTimeout(function () {
+    Array.prototype.forEach.call(kirlar, function (el) { el.classList.add("bor"); });
+  }, 3500);
+
+  /* ---------- Video joyi ---------- */
+  $("videoTugma").addEventListener("click", function () {
+    olcha("video_bosildi", {});
+    /* VSL tayyor bo'lgach shu yerga <iframe> qo'yiladi.
+       Hozircha odam yo'qolmasin — to'g'ridan-to'g'ri narx blokiga tushadi. */
+    document.getElementById("narx").scrollIntoView({ behavior: "smooth" });
+  });
+
+  function olcha(hodisa, qosh) {
+    try { if (typeof window.olcha === "function") window.olcha(hodisa, qosh); } catch (e) {}
+  }
+})();
+</script>
+<script src="olcha.js" defer></script>
+</body>
+</html>
